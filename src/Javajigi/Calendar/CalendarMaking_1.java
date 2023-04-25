@@ -3,14 +3,17 @@ package Javajigi.Calendar;
 import java.util.Scanner;
 
 public class CalendarMaking_1 {
+
+    private final static String PROMPT = "> ";
+
     public static void main(String[] args) {
-        String prompt = "> ";
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             System.out.println("달을 입력해 주세요");
-            System.out.print(prompt);
+            System.out.print(PROMPT);
             int month = scanner.nextInt();
+            int year = 2023;
             if (month == -1) {
                 break;
             }
@@ -19,17 +22,17 @@ public class CalendarMaking_1 {
             }
             if (month < 8) {
                 if (month == 2) {
-                    Calendar.printCalendarCase1();
+                    Calendar.printCalendarCase1(year, month);
                 } else if (month%2 == 0) {
-                    Calendar.printCalendarCase2();
+                    Calendar.printCalendarCase2(year, month);
                 } else {
-                    Calendar.printCalendarCase3();
+                    Calendar.printCalendarCase3(year, month);
                 }
             } else {
                 if (month % 2 == 0) {
-                    Calendar.printCalendarCase3();
+                    Calendar.printCalendarCase3(year, month);
                 } else {
-                    Calendar.printCalendarCase2();
+                    Calendar.printCalendarCase2(year, month);
                 }
             }
         }
