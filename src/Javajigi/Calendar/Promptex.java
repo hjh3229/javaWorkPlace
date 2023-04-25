@@ -9,6 +9,9 @@ public class Promptex {
         Calendarex cal = new Calendarex();
 
         while (true) {
+            System.out.println("년도를 입력해 주세요");
+            System.out.print(PROMPT);
+            int year = scanner.nextInt();
             System.out.println("달을 입력해 주세요");
             System.out.print(PROMPT);
             int month = scanner.nextInt();
@@ -19,7 +22,7 @@ public class Promptex {
                 continue;
             }
 
-            cal.printCalendar(2023, month);
+            cal.printCalendar(year, month);
         }
 
         System.out.println("반복이 종료되었습니다.");
