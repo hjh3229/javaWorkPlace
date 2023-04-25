@@ -4,12 +4,9 @@ import java.util.Scanner;
 
 public class DaysOfMonth {
     public static void main(String[] args) {
-        int a;
         Scanner scanner = new Scanner(System.in);
-        String s1;
         System.out.println("달을 입력해 주세요");
-        s1 = scanner.next();
-        a = Integer.parseInt(s1);
+        int a = scanner.nextInt();
         int b = 30;
         int c = 31;
         int d = 28;
