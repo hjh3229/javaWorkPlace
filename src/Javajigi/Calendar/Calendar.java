@@ -24,6 +24,9 @@ class Add {
         System.out.println(s1 + ", " + s2);
         a = Integer.parseInt(s1);
         b = Integer.parseInt(s2);
-        System.out.println(s1 + " + " + s2 + " = " + a+b);
+//        int c = a+b;
+//        System.out.println(s1 + " + " + s2 + " = " + c);
+//        System.out.printf("두 수의 합은 %d입니다.", a+b);
+        System.out.printf("%d와 %d의 합은 %d입니다.", a, b, a+b);
     }
 }
