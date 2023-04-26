@@ -19,7 +19,7 @@ public class Promptex {
             case "sa":
                 return 6;
             default:
-                return 0;
+                return -1;
         }
     }
 
@@ -28,20 +28,24 @@ public class Promptex {
         Calendarex cal = new Calendarex();
 
         while (true) {
-            System.out.println("년도를 입력해 주세요.");
+            System.out.println("년도를 입력해 주세요.(exit : -1)");
             System.out.print("YEAR> ");
             int year = scanner.nextInt();
+            if (year == -1)
+                break;
             System.out.println("달을 입력해 주세요.");
             System.out.print("MONTH> ");
             int month = scanner.nextInt();
+            if (month > 12 || month < 1) {
+                System.out.println("잘못된 입력입니다.");
+                break;
+            }
             System.out.println("첫째 날의 요일을 입력하세요(su, mo, tu, we, th, fr, sa).");
             String str_weekday = scanner.next();
             int weekday = parseDay(str_weekday);
-            if (month == -1) {
+            if (weekday == -1) {
+                System.out.println("잘못된 입력입니다.");
                 break;
-            }
-            if (month > 12) {
-                continue;
             }
 
             cal.printCalendar(year, month, weekday);
