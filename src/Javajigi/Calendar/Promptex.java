@@ -27,6 +27,7 @@ public class Promptex {
         Scanner scanner = new Scanner(System.in);
         Calendarex cal = new Calendarex();
 
+
         while (true) {
             System.out.println("년도를 입력해 주세요.");
             System.out.print("YEAR> ");

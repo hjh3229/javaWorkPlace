@@ -14,6 +14,7 @@ public class Calendarex {
         } else return MAX_DAYS[month - 1];
     }
 
+
     public void printCalendar(int year, int month, int weekday) {
         System.out.printf("   <<%4d년%3d월>>\n", year, month);
         System.out.println(" SU MO TU WE TH FR SA");
