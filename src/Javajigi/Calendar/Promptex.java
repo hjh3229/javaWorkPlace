@@ -27,7 +27,6 @@ public class Promptex {
         Scanner scanner = new Scanner(System.in);
         Calendarex cal = new Calendarex();
 
-
         while (true) {
             System.out.println("년도를 입력해 주세요.");
             System.out.print("YEAR> ");
@@ -38,7 +37,6 @@ public class Promptex {
             System.out.println("첫째 날의 요일을 입력하세요(su, mo, tu, we, th, fr, sa).");
             String str_weekday = scanner.next();
             int weekday = parseDay(str_weekday);
-            System.out.println(str_weekday + ", " + weekday);
             if (month == -1) {
                 break;
             }
