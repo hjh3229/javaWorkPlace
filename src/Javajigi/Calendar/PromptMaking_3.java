@@ -30,6 +30,7 @@ public class PromptMaking_3 {
         scanner.close();
     }
 
+
     public static void main(String[] args) {
         PromptMaking_3 p = new PromptMaking_3();
         p.rumPrompt();
