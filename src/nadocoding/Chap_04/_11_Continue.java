@@ -31,14 +31,15 @@ public class _11_Continue {
 
         // while 문
         sold = 0;
-        int index = 1;
-        while (index <= 50) {
+        int index = 0;
+        // while (index <= 50) {
+        while (true) {
+            index += 1;
             System.out.println(index + "번 손님, 주문하신 치킨 나왔습니다.");
 
             // noshow
             if (index == noShow) {
                 System.out.println(index + "번 손님, 노쇼로 인해 다음 손님에게 기회가 넘어갑니다.");
-                index++;
                 continue; // 아래 명령은 모두 건너뜀
             }
             sold++;
@@ -46,7 +47,6 @@ public class _11_Continue {
                 System.out.println("금일 재료가 모두 소진되었습니다.");
                 break;
             }
-            index++;
         }
         System.out.println("영업을 종료합니다.");
     }
