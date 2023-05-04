@@ -6,8 +6,28 @@ public class BlackBox {
     String resolution; // 해상도
     int price; // 가격
     String color; // 색상
+    int serialNumber; // 시리얼 번호
+
+    static int counter = 0; // 시리얼 번호를 생성해주는 역할 (처음엔 0이였다가 증감연산자로 증가)
     // _03
     static boolean canAutoReport = false; // 자동 신고 가능
+
+    // _08
+    BlackBox() {  // 생성자 // 인스턴스가 생성될 때 자동으로 실행되는 메소드
+//        System.out.println("기본 생성자 호출");
+//        this.serialNumber = ++counter;
+//        System.out.println("새로운 시리얼 넘버를 발급받았습니다. " + this.serialNumber);
+    }
+
+    BlackBox(String modelName, String resolution, int price, String color) {
+//        this(); // 기본 생성자 호출
+//
+//        System.out.println("사용자 지정 생성자 호출");
+//        this.modelName = modelName;
+//        this.resolution = resolution;
+//        this.price = price;
+//        this.color = color;
+    }
 
     // _04
     void autoReport() {
@@ -61,5 +81,46 @@ public class BlackBox {
         // modelName += modelName; // 이렇게 하면 전달값에 전달값을 더하는 기능이 되버린다.
         // 이와같이 이미 존재하는 인스턴스 변수명과 전달값의 이름이 같은 경우 이를 구분하기 위해 this를 붙인다.
         this.modelName += modelName;
+    }
+
+    // _09
+    // Getter & Setter
+    String getModelName() {
+        return modelName;
+    }
+
+    void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
+
+    String getResolution() {
+        if (resolution == null || resolution.isEmpty()) {
+            return "판매자에게 문의하세요.";
+        }
+        return resolution;
+    }
+
+    void setResolution(String resolution) {
+        this.resolution = resolution;
+    }
+
+    int getPrice() {
+        return price;
+    }
+
+    void setPrice(int i) {
+        if (price < 100000) {
+            this.price = 100000;
+        } else {
+            this.price = price;
+        }
+    }
+
+    String getColor() {
+        return color;
+    }
+
+    void setColor(String color) {
+        this.color = color;
     }
 }
