@@ -1,4 +1,4 @@
-package programmers.Lv_01;
+package programmers.Lv_00;
 import java.util.Scanner;
 
 public class Training_01 {
