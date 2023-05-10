@@ -3,10 +3,10 @@ import java.util.Scanner;
 public class Training_02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
+        String str = sc.next();
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            System.out.print(str);
+        }
     }
 }
