@@ -3,7 +3,9 @@ package nadocoding.Chap_07.Camera;
 public class SpeedCam extends Camera { // 자식 클래스
     // _12
     public SpeedCam() {
-        this.name = "과속단속 카메라";
+        // this.name = "과속단속 카메라";
+        // _15
+        super("과속단속 카메라");
     }
 
     public void checkSpeed() {
@@ -20,5 +22,13 @@ public class SpeedCam extends Camera { // 자식 클래스
     @Override // annotation
     public void showMainFeature() {
         System.out.println(this.name + " 의 주요 기능 : 속도 측정, 번호 인식");
+    }
+
+    // _15
+    public void takePicture() {
+        // 사진 촬영
+        super.takePicture();
+        checkSpeed();
+        recognizeLicensePlate();
     }
 }

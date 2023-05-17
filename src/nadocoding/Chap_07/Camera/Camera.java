@@ -5,9 +5,9 @@ public class Camera { // 부모 클래스
     public String name;
 
     // 상단 메뉴바 -> Code -> Generate == Alt + Insert -> Constructor
-    public Camera() {
-        this.name = "카메라";
-    }
+//    public Camera() {
+//        this.name = "카메라";
+//    }
 
     public void takePicture() {
         // 사진 촬영
@@ -22,5 +22,14 @@ public class Camera { // 부모 클래스
     // _13
     public void showMainFeature() {
         System.out.println(this.name + " 의 주요 기능 : 사진 촬영, 동영상 녹화");
+    }
+
+    // _15
+    public Camera() {
+        this("카메라");
+    }
+
+    protected Camera(String name) {
+        this.name = name;
     }
 }
