@@ -1,7 +1,5 @@
 package nadocoding.Chap_07;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-import nadocoding.Chap_07.Burger;
 /*
 클래스를 이용하여 햄버거를 자동으로 만드는 프로그램을 작성하시오
 
@@ -15,18 +13,56 @@ import nadocoding.Chap_07.Burger;
 
 public class _Quiz_07 {
     public static void main(String[] args) {
-        Burger[] burgers = new Burger[3];
-        burgers[0] = new HamBurger();
-        burgers[1] = new CheeseBurger();
-        burgers[2] = new ShrimpBurger();
+        HamBurger[] hamBurgers = new HamBurger[3];
+        hamBurgers[0] = new HamBurger();
+        hamBurgers[1] = new CheeseBurger();
+        hamBurgers[2] = new ShrimpBurger();
 
 
         System.out.println("주문하신 메뉴를 만듭니다.");
-        for (Burger burger : burgers) {
-            burger.cock();
+        for (HamBurger hamBurger : hamBurgers) {
+            hamBurger.cock();
             System.out.println("-----------------");
         }
         System.out.println("메뉴 준비가 완료되었습니다.");
+    }
+}
+
+class HamBurger {
+    public String name;
+
+    public HamBurger() {
+        this("햄버거");
+    }
+
+    public HamBurger(String name) {
+        this.name = name;
+    }
+
+    public void cock() {
+        System.out.println("재료는 양상추, 패티, 피클입니다.");
+    }
+}
+
+class ShrimpBurger extends HamBurger {
+    public ShrimpBurger() {
+        super("새우버거");
+    }
+
+    @Override
+    public void cock() {
+        System.out.println("재료는 양상추, 패티, 피클, 새우입니다.");
+    }
+}
+
+class CheeseBurger extends HamBurger {
+    public CheeseBurger() {
+        super("치즈버거");
+    }
+
+    @Override
+    public void cock() {
+        System.out.println("재료는 양상추, 패티, 피클, 치즈입니다.");
     }
 }
 
