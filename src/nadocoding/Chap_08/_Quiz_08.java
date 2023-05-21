@@ -32,6 +32,7 @@ public class _Quiz_08 {
         SpeedCam speedCam = new SpeedCam();
         speedCam.setDetector(new AccidentDetector());
         speedCam.setReporter(new VideoReporter());
+
         speedCam.detect();
         speedCam.report();
     }
