@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Stack;
 
-public class Collection_List {
+public class List {
     public static void main(String[] args) {
         // ArrayList
         // (사용하기 위해선 import java.util.ArrayList; 를 추가해야합니다.)
