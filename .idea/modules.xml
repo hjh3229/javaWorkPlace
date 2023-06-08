@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/algorithm/algorithm.iml" filepath="$PROJECT_DIR$/algorithm/algorithm.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaWorkPlace.iml" filepath="$PROJECT_DIR$/javaWorkPlace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kioskMaking/kioskMaking.iml" filepath="$PROJECT_DIR$/kioskMaking/kioskMaking.iml" />
     </modules>
   </component>
 </project>
